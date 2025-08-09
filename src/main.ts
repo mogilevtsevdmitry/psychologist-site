@@ -259,7 +259,7 @@ menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 }))
 
 const io = ('IntersectionObserver' in window) ? new IntersectionObserver((entries)=>{
-  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target as Element); } });
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io?.unobserve(e.target as Element); } });
 }, {threshold: .08}) : null;
 document.querySelectorAll('.reveal').forEach(el => {
   if(io) io.observe(el); else (el as HTMLElement).classList.add('in');
