@@ -7,7 +7,7 @@ app.innerHTML = `
     <nav class="nav">
       <a class="brand" href="#home" aria-label="На главную">
         <span class="brand__logo" aria-hidden="true"></span>
-        <span class="brand__name">Имя Фамилия</span>
+        <span class="brand__name">Седлецкая Мария</span>
       </a>
       <div class="nav__links" role="navigation" aria-label="Основные разделы">
         <a class="nav__link" href="#about">Обо мне</a>
@@ -220,10 +220,10 @@ app.innerHTML = `
           <h3 style="margin-top:0">Как со мной связаться</h3>
           <ul class="contacts-list">
             <li>Город: Тюмень / Онлайн</li>
-            <li>Телефон: <a href="tel:+7XXXXXXXXXX">+7 (XXX) XXX‑XX‑XX</a></li>
-            <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
-            <li>Telegram: <a href="https://t.me/your_handle" target="_blank" rel="noopener">t.me/your_handle</a></li>
-            <li>Instagram*: <a href="#" target="_blank" rel="noopener">@your_handle</a></li>
+          <li>Телефон: <a href="tel:89088723901">8 (908) 872-39-01</a></li>
+          <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
+          <li>Telegram: <a href="https://t.me/mariyasedletskaya" target="_blank" rel="noopener">@mariyasedletskaya</a></li>
+          <li>Instagram*: <a href="#" target="_blank" rel="noopener">@your_handle</a></li>
           </ul>
           <p class="hint">*организация, признанная в РФ экстремистской.</p>
         </aside>
@@ -233,7 +233,7 @@ app.innerHTML = `
 
   <footer>
     <div class="footer__inner">
-      <div>© <span id="year"></span> Имя Фамилия — психолог</div>
+      <div>© <span id="year"></span> Седлецкая Мария — психолог</div>
       <div class="socials">
         <a href="#articles">Статьи</a>
         <a href="#reviews">Отзывы</a>
@@ -257,9 +257,15 @@ burger?.addEventListener('click', () => {
 menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   burger?.setAttribute('aria-expanded', 'false'); menu?.classList.remove('show')
 }))
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 861) {
+    menu?.classList.remove('show')
+    burger?.setAttribute('aria-expanded', 'false')
+  }
+})
 
-const io = ('IntersectionObserver' in window) ? new IntersectionObserver((entries)=>{
-  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io?.unobserve(e.target as Element); } });
+const io = ('IntersectionObserver' in window) ? new IntersectionObserver((entries, observer)=>{
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); observer.unobserve(e.target as Element); } });
 }, {threshold: .08}) : null;
 document.querySelectorAll('.reveal').forEach(el => {
   if(io) io.observe(el); else (el as HTMLElement).classList.add('in');
