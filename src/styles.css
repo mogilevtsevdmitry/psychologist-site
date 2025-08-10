@@ -32,6 +32,7 @@ body{
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
 }
+button, input, textarea{ font-family:var(--f-base); }
 .header{ position:sticky; top:0; z-index:50; backdrop-filter: blur(8px); background:rgba(246,241,233,.7); border-bottom:1px solid rgba(0,0,0,.04); }
 .nav{ display:flex; align-items:center; justify-content:space-between; width:var(--container); margin:0 auto; padding:12px 0; gap:16px; }
 .brand{ display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--ink);}
@@ -42,6 +43,7 @@ body{
 .nav__link:hover{ background:rgba(156,178,124,.12) }
 .burger{ display:none; background:transparent; border:0; padding:8px; border-radius:10px}
 .burger span{ display:block; width:24px; height:2px; background:var(--ink); margin:5px 0; border-radius:2px}
+.mobile-menu{ display:none }
 @media (max-width: 860px){
   .nav__links{ display:none }
   .burger{ display:block }
@@ -55,7 +57,7 @@ body{
 .hero h1{ font-size:var(--fs-1); margin:16px 0 10px; line-height:1.15; font-weight:700; letter-spacing:.2px}
 .hero p{ font-size:var(--fs-3); color:var(--ink-soft); margin:0 0 22px }
 .hero__cta{ display:flex; gap:12px; flex-wrap:wrap; }
-.btn{ appearance:none; border:0; cursor:pointer; font-weight:600; letter-spacing:.2px; padding:12px 18px; border-radius:999px; display:inline-flex; align-items:center; gap:10px; box-shadow:var(--shadow-sm); }
+.btn{ appearance:none; border:0; cursor:pointer; font-family:var(--f-base); font-weight:600; letter-spacing:.2px; padding:12px 18px; border-radius:999px; display:inline-flex; align-items:center; gap:10px; box-shadow:var(--shadow-sm); }
 .btn--primary{ background:var(--accent); color:var(--accent-contrast) }
 .btn--ghost{ background:var(--white); color:var(--ink); border:1px solid rgba(0,0,0,.07) }
 .btn:focus-visible{ outline:3px solid rgba(156,178,124,.35) }
