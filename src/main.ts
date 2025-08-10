@@ -65,17 +65,6 @@ app.innerHTML = `
             <li>Фокус на результат и устойчивые изменения</li>
           </ul>
         </article>
-        <aside class="card">
-          <h3 style="margin-top:0">Галерея</h3>
-          <div class="gallery" aria-label="Профессиональные фотографии">
-            <div class="gallery__item" style="background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop')"></div>
-            <div class="gallery__item tall" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop')"></div>
-            <div class="gallery__item" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop')"></div>
-            <div class="gallery__item" style="background-image:url('https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=800&auto=format&fit=crop')"></div>
-            <div class="gallery__item tall" style="background-image:url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=800&auto=format&fit=crop')"></div>
-            <div class="gallery__item" style="background-image:url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=800&auto=format&fit=crop')"></div>
-          </div>
-        </aside>
       </div>
     </div>
   </section>
