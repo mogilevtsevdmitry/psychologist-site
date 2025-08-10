@@ -112,7 +112,7 @@ label{ font-weight:600; font-size:14px }
 input, textarea{ font:inherit; padding:12px 12px; border-radius:12px; border:1px solid rgba(0,0,0,.08); background:#fff; color:var(--ink); }
 textarea{ min-height:120px; resize:vertical }
 .hint{ font-size:12px; color:var(--ink-soft) }
-.form .btn{ width:100% }
+.form .btn{ width:100%; justify-content:center; font-family:var(--f-base); }
 .contacts-card{ background:var(--white); border-radius:var(--radius-lg); box-shadow:var(--shadow-sm); padding:18px; }
 .contacts-list{ list-style:none; margin:0; padding:0; display:grid; gap:10px }
 .contacts-list a{ color:var(--accent); text-decoration:none }
