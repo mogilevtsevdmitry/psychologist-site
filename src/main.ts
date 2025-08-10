@@ -213,7 +213,7 @@ app.innerHTML = `
             <label for="message">Сообщение</label>
             <textarea id="message" name="message" placeholder="Коротко опишите ваш запрос"></textarea>
           </div>
-          <p class="hint">Отправляя форму, вы соглашаетесь с обработкой персональных данных.</p>
+          <p class="hint">Отправляя форму, вы соглашаетесь с <a href="https://poised-quartz-78b.notion.site/24b9ce0147658033ba7cea0db56c2d0f?source=copy_link" target="_blank" rel="noopener">политикой конфиденциальности</a>.</p>
           <button class="btn btn--primary" type="submit">Отправить</button>
         </form>
         <aside class="contacts-card">
@@ -221,9 +221,9 @@ app.innerHTML = `
           <ul class="contacts-list">
             <li>Город: Тюмень / Онлайн</li>
           <li>Телефон: <a href="tel:89088723901">8 (908) 872-39-01</a></li>
-          <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
+          <li>Email: <a href="mailto:sedmarisa@mail.ru">sedmarisa@mail.ru</a></li>
           <li>Telegram: <a href="https://t.me/mariyasedletskaya" target="_blank" rel="noopener">@mariyasedletskaya</a></li>
-          <li>Instagram*: <a href="#" target="_blank" rel="noopener">@your_handle</a></li>
+          <li>Instagram*: <a href="https://www.instagram.com/marisasergeewna" target="_blank" rel="noopener">@marisasergeewna</a></li>
           </ul>
           <p class="hint">*организация, признанная в РФ экстремистской.</p>
         </aside>
@@ -238,6 +238,7 @@ app.innerHTML = `
         <a href="#articles">Статьи</a>
         <a href="#reviews">Отзывы</a>
         <a href="#contact">Контакты</a>
+        <a href="https://poised-quartz-78b.notion.site/24b9ce0147658033ba7cea0db56c2d0f?source=copy_link" target="_blank" rel="noopener">Политика конфиденциальности</a>
       </div>
     </div>
   </footer>
