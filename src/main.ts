@@ -231,6 +231,11 @@ app.innerHTML = `
       </div>
     </div>
   </footer>
+
+  <div id="post-view" class="post-view">
+    <button class="post-view__close" aria-label="Закрыть статью">×</button>
+    <div class="post-view__content"></div>
+  </div>
 `
 
 // Behavior
@@ -281,3 +286,24 @@ chips.forEach(chip => chip.addEventListener('click', ()=>{
     ;(p as HTMLElement).style.display = ok ? '' : 'none'
   })
 }))
+
+// Post fullscreen view
+const postView = document.getElementById('post-view') as HTMLDivElement
+const postViewContent = postView.querySelector('.post-view__content') as HTMLDivElement
+const postViewClose = postView.querySelector('.post-view__close') as HTMLButtonElement
+
+document.querySelectorAll('.post').forEach(post => {
+  post.addEventListener('click', () => {
+    const clone = post.cloneNode(true) as HTMLElement
+    postViewContent.innerHTML = ''
+    postViewContent.appendChild(clone)
+    postView.classList.add('show')
+    document.body.style.overflow = 'hidden'
+  })
+})
+
+postViewClose.addEventListener('click', () => {
+  postView.classList.remove('show')
+  postViewContent.innerHTML = ''
+  document.body.style.overflow = ''
+})
