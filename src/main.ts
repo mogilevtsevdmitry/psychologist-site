@@ -189,7 +189,8 @@ app.innerHTML = `
         <p class="section__desc">Обычно отвечаю в течение 24 часов в будние дни.</p>
       </div>
       <div class="contact__grid">
-        <form class="form" aria-label="Форма связи">
+        <form class="form" aria-label="Форма связи" action="https://formsubmit.co/sedmarisa@mail.ru" method="POST">
+          <input type="hidden" name="_captcha" value="false">
           <div class="field">
             <label for="name">Имя</label>
             <input id="name" name="name" type="text" placeholder="Как к вам обращаться" required>
@@ -266,12 +267,26 @@ document.querySelectorAll('.reveal').forEach(el => {
   if(io) io.observe(el); else (el as HTMLElement).classList.add('in');
 });
 
-// Dummy submit
+// Real form submit via formsubmit.co
 const form = document.querySelector('.form') as HTMLFormElement
-form.addEventListener('submit', (e)=>{
+form.addEventListener('submit', async (e) => {
   e.preventDefault()
-  alert('Спасибо! Ваше сообщение отправлено.')
-  form.reset()
+  const data = new FormData(form)
+  try {
+    const res = await fetch('https://formsubmit.co/ajax/sedmarisa@mail.ru', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    if (res.ok) {
+      alert('Спасибо! Ваше сообщение отправлено.')
+      form.reset()
+    } else {
+      alert('Произошла ошибка. Попробуйте еще раз.')
+    }
+  } catch {
+    alert('Произошла ошибка. Попробуйте еще раз.')
+  }
 })
 
 // Filters
